@@ -3,8 +3,10 @@ import Navbar from "@components/navbar";
 
 const Layout = () => {
 	return (
-		<div className='min-h-screen max-w-screen-2xl mx-auto bg-background text-foreground'>
+		<div className='min-h-screen mx-auto max-w-screen-2xl bg-background text-foreground'>
 			<Navbar />
+			<Hero />
+			<Hero />
 			<Hero />
 		</div>
 	);
