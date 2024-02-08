@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
 	return (
-		<div className='flex flex-col gap-10 px-[3.75rem] py-[1.5rem] font-light text-center'>
+		<>
 			<h1 className='text-5xl tracking-wide'>Developer Name</h1>
 			<div className='flex justify-center px-6 md:px-0'>
 				<span className='h-[1px] w-full md:w-[20rem] bg-foreground'></span>
@@ -24,7 +24,7 @@ const Hero = () => {
 					Contact
 				</Button>
 			</div>
-		</div>
+		</>
 	);
 };
 
