@@ -1,6 +1,7 @@
 import About from "@components/about";
 import Hero from "@components/hero";
 import Navbar from "@components/navbar";
+import Projects from "@components/projects";
 
 const Layout = () => {
 	return (
@@ -9,6 +10,7 @@ const Layout = () => {
 			<div className='flex flex-col gap-10 sm:px-[3.75rem] py-[1.5rem] font-light text-center'>
 				<Hero />
 				<About />
+				<Projects />
 			</div>
 		</div>
 	);

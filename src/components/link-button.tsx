@@ -15,7 +15,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({ to, children }) => {
 			variant={to !== "#contact" ? "link" : "default"}
 			size={to === "#contact" ? "lg" : "default"}
 			onClick={handleClick}
-			className='text-2xl font-light'
+			className='text-xl font-light md:text-2xl'
 		>
 			{children}
 		</Button>
