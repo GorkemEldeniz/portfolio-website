@@ -1,6 +1,10 @@
+import { useRef } from "react";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+
+import emailjs from "@emailjs/browser";
 
 import {
 	Form,
@@ -15,40 +19,52 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 
 const formSchema = z.object({
-	name: z.string().min(2),
-	email: z.string().email({
+	user_name: z.string().min(2),
+	user_email: z.string().email({
 		message: "Email adress must be valid",
 	}),
 	message: z.string().min(4).max(100),
 });
 
 export function ContactForm() {
+	const formRef = useRef<null | HTMLFormElement>(null);
+
 	// 1. Define your form.
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 	});
 
-	// 2. Define a submit handler.
-	function onSubmit(values: z.infer<typeof formSchema>) {
-		// Do something with the form values.
-		// ✅ This will be type-safe and validated.
-		console.log(values);
+	async function onSubmit() {
+		try {
+			await emailjs.sendForm(
+				import.meta.env.VITE_EMAIL_SERVICE_ID,
+				import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+				formRef.current ?? "",
+				{
+					publicKey: import.meta.env.VITE_EMAIL_PUBLIC_KEY,
+				}
+			);
+			console.log("gönderildi");
+		} catch (er) {
+			console.log(er);
+		}
 	}
 
 	return (
 		<Form {...form}>
 			<form
+				ref={formRef}
 				onSubmit={form.handleSubmit(onSubmit)}
 				className='grid grid-flow-row px-6 text-left md:grid-cols-2 gap-x-6 gap-y-3'
 			>
 				<FormField
 					control={form.control}
-					name='name'
+					name='user_name'
 					render={({ field }) => (
 						<FormItem>
 							<FormLabel>Name</FormLabel>
 							<FormControl>
-								<Input placeholder='name' {...field} />
+								<Input placeholder='Name' {...field} />
 							</FormControl>
 							<FormMessage />
 						</FormItem>
@@ -71,12 +87,12 @@ export function ContactForm() {
 
 				<FormField
 					control={form.control}
-					name='email'
+					name='user_email'
 					render={({ field }) => (
 						<FormItem>
 							<FormLabel>Email Adress</FormLabel>
 							<FormControl>
-								<Input placeholder='email' {...field} />
+								<Input placeholder='Email' {...field} />
 							</FormControl>
 							<FormMessage />
 						</FormItem>
