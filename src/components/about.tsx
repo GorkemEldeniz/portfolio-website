@@ -5,7 +5,10 @@ import TechStack from "./tech-stack";
 const About = () => {
 	return (
 		<>
-			<h1 className='mt-10 text-3xl tracking-wide md:mt-12 md:text-4xl'>
+			<h1
+				id='about'
+				className='mt-10 text-3xl tracking-wide md:mt-12 md:text-4xl'
+			>
 				About
 			</h1>
 			<div className='flex justify-center px-6 md:px-0'>

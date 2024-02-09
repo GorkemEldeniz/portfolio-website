@@ -6,7 +6,7 @@ export type Route = {
 const routes = [
 	{
 		name: "Home",
-		to: "#",
+		to: "/",
 	},
 	{
 		name: "About",

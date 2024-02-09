@@ -68,7 +68,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border scroll-smooth scroll-mt-5;
   }
 
   body {

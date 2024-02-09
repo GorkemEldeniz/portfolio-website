@@ -4,7 +4,10 @@ import ProjectCard from "./project-card";
 const Projects = () => {
 	return (
 		<>
-			<h1 className='mt-10 text-3xl tracking-wide md:mt-12 md:text-4xl'>
+			<h1
+				id='projects'
+				className='mt-10 text-3xl tracking-wide md:mt-12 md:text-4xl'
+			>
 				Projects
 			</h1>
 			<div className='flex justify-center px-6 md:px-0'>

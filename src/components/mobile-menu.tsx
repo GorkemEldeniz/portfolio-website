@@ -57,7 +57,7 @@ const MobileMenu = () => {
 					items={routes}
 					render={(item) => {
 						return (
-							<LinkButton key={item.name} to={item.to}>
+							<LinkButton setOpen={setOpen} key={item.name} to={item.to}>
 								{item.name}
 							</LinkButton>
 						);

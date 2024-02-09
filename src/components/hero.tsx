@@ -3,7 +3,10 @@ import { Button } from "./ui/button";
 const Hero = () => {
 	return (
 		<>
-			<h1 className='mt-10 text-4xl tracking-wide md:mt-12 md:text-5xl'>
+			<h1
+				id='hero'
+				className='mt-10 text-4xl tracking-wide md:mt-12 md:text-5xl'
+			>
 				Developer Name
 			</h1>
 			<div className='flex justify-center px-6 md:px-0'>
