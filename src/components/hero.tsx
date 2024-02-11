@@ -7,26 +7,34 @@ const Hero = () => {
 				id='hero'
 				className='mt-10 text-4xl tracking-wide md:mt-12 md:text-5xl'
 			>
-				Developer Name
+				Frontend Developer
 			</h1>
 			<div className='flex justify-center px-6 md:px-0'>
 				<span className='h-[1px] w-full md:w-[20rem] bg-foreground'></span>
 			</div>
 			<p className='px-6 mx-auto text-sm md:w-4/5 md:text-lg'>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum
-				urna quis magna lobortis, eget finibus urna vestibulum. Sed nec ex non
-				justo dictum venenatis. Fusce nec purus nec mauris posuere malesuada
+				I have been working in the frontend development for more than 3 years.
+				On this path, which I started by learning html and css, I am currently
+				working on javascript frameworks (React,Vue). I'm learning css
+				frameworks and technologies such as tailwind, styled-component, scss,
+				module-css. I'm learning ssr frameworks like Next js to become a full
+				stack developer.I work freelance to improve myself.
 			</p>
 			<div className='flex flex-col items-center gap-6 md:justify-center md:flex-row'>
 				<Button
+					asChild
 					className='text-xl font-light md:text-2xl w-fit'
 					size='lg'
 					variant='outline'
 				>
-					Projects
+					<a href='#projects'>Projects</a>
 				</Button>
-				<Button className='text-xl font-light md:text-2xl w-fit' size='lg'>
-					Contact
+				<Button
+					asChild
+					className='text-xl font-light md:text-2xl w-fit'
+					size='lg'
+				>
+					<a href='#contact'>Contact</a>
 				</Button>
 			</div>
 		</>

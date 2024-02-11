@@ -15,9 +15,14 @@ const About = () => {
 				<span className='h-[1px] w-full md:w-[20rem] bg-foreground'></span>
 			</div>
 			<p className='px-6 mx-auto text-sm md:w-4/5 md:text-lg'>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum
-				urna quis magna lobortis, eget finibus urna vestibulum. Sed nec ex non
-				justo dictum venenatis. Fusce nec purus nec mauris posuere malesuada
+				Hi, it's me <span className='font-bold'>Gorkem</span>, I live in
+				Gaziantep/Turkey and I am 26 years old. In 2018, I qualify for the
+				electrical and electronics engineering at Cukurova University. After 2
+				years, I decided to progress in the field of software and switched to
+				the Web Design department at Anadolu University. Since then I have been
+				improving myself by attending bootcamps and taking courses.
+				<br />
+				These are the technologies I actively use:
 			</p>
 			<TechStack<TechStackType>
 				className='grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4'
