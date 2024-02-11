@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -27,6 +27,7 @@ const formSchema = z.object({
 });
 
 export function ContactForm() {
+	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const formRef = useRef<null | HTMLFormElement>(null);
 
 	// 1. Define your form.
@@ -35,6 +36,7 @@ export function ContactForm() {
 	});
 
 	async function onSubmit() {
+		setIsLoading(true);
 		try {
 			await emailjs.sendForm(
 				import.meta.env.VITE_EMAIL_SERVICE_ID,
@@ -44,9 +46,11 @@ export function ContactForm() {
 					publicKey: import.meta.env.VITE_EMAIL_PUBLIC_KEY,
 				}
 			);
-			console.log("gönderildi");
+			setIsLoading(false);
 		} catch (er) {
 			console.log(er);
+		} finally {
+			setIsLoading(false);
 		}
 	}
 
@@ -99,9 +103,10 @@ export function ContactForm() {
 					)}
 				/>
 
-				<div className='flex justify-end md:col-span-2'>
+				<div className='md:flex md:justify-end md:col-span-2'>
 					<Button
-						className='text-xl font-light md:text-2xl md:w-fit'
+						disabled={isLoading}
+						className='w-full text-xl font-light md:text-2xl md:w-fit'
 						size='lg'
 						type='submit'
 					>
