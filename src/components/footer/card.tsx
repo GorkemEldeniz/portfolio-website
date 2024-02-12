@@ -12,7 +12,7 @@ const FooterCard = ({ name, link, Icon }: FooterCardProps) => {
 			aria-label={name}
 			href={link}
 			target='_blank'
-			className='flex items-center justify-center w-8 h-8 rounded-full md:w-10 md:h-10 bg-foreground'
+			className='flex items-center justify-center w-8 h-8 rounded-full md:w-10 md:h-10 bg-foreground hover:bg-primary/90'
 		>
 			<Icon className='w-5 h-5 fill-background' />
 		</a>
