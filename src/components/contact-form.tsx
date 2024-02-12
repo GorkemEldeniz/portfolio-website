@@ -14,6 +14,7 @@ import {
 	FormLabel,
 	FormMessage,
 } from "@components/ui/form";
+import { useToast } from "@hooks/use-toast";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -29,6 +30,8 @@ const formSchema = z.object({
 export function ContactForm() {
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const formRef = useRef<null | HTMLFormElement>(null);
+
+	const { toast } = useToast();
 
 	// 1. Define your form.
 	const form = useForm<z.infer<typeof formSchema>>({
@@ -46,9 +49,22 @@ export function ContactForm() {
 					publicKey: import.meta.env.VITE_EMAIL_PUBLIC_KEY,
 				}
 			);
+			form.reset({
+				user_name: "",
+				message: "",
+				user_email: "",
+			});
+			toast({
+				title: "Email",
+				description: "Mail sent successfully",
+			});
 			setIsLoading(false);
 		} catch (er) {
-			console.log(er);
+			toast({
+				variant: "destructive",
+				title: "Email",
+				description: "An error occurred in mail delivery",
+			});
 		} finally {
 			setIsLoading(false);
 		}
