@@ -12,7 +12,7 @@ const Hero = () => {
 			<div className='flex justify-center px-6 md:px-0'>
 				<span className='h-[1px] w-full md:w-[20rem] bg-foreground'></span>
 			</div>
-			<p className='px-6 mx-auto text-sm md:w-4/5 md:text-lg'>
+			<p className='px-6 mx-auto text-sm text-left md:text-center md:w-4/5 md:text-lg'>
 				I have been working in the frontend development for more than 3 years.
 				On this path, which I started by learning html and css, I am currently
 				working on javascript frameworks (React,Vue). I'm learning css

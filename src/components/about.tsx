@@ -14,7 +14,7 @@ const About = () => {
 			<div className='flex justify-center px-6 md:px-0'>
 				<span className='h-[1px] w-full md:w-[20rem] bg-foreground'></span>
 			</div>
-			<p className='px-6 mx-auto text-sm md:w-4/5 md:text-lg'>
+			<p className='px-6 mx-auto text-sm text-left md:text-center md:w-4/5 md:text-lg'>
 				Hi, it's me <span className='font-bold'>Gorkem</span>, I live in
 				Gaziantep/Turkey and I am 26 years old. In 2018, I qualify for the
 				electrical and electronics engineering at Cukurova University. After 2
