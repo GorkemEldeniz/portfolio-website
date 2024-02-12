@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 
 import cn from "@utils/cn";
 import { useEffect, useState } from "react";
-import LinkButton from "./link-button";
+import LinkButton from "../link-button";
 import ListItem from "./navlist";
 
 const MobileMenu = () => {

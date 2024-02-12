@@ -1,5 +1,5 @@
-import type { TechStackType } from "@utils/techStacks";
-import techStacks from "@utils/techStacks";
+import type { TechStackType } from "@utils/tech-stacks";
+import techStacks from "@utils/tech-stacks";
 import TechStack from "./tech-stack";
 
 const About = () => {

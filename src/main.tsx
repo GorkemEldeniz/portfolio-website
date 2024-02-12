@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { ThemeProvider } from "@components/theme-provider.tsx";
+import { ThemeProvider } from "./context/theme-provider.tsx";
 import Layout from "./Layout.tsx";
 
 import { Toaster } from "@components/toaster.tsx";

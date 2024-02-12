@@ -1,7 +1,7 @@
-import type { TechStackType } from "@utils/techStacks";
-import TechStack from "./tech-stack";
+import type { TechStackType } from "@utils/tech-stacks";
+import TechStack from "../tech-stack";
 
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 import { FaGithub } from "react-icons/fa";
 import { IoIosLink } from "react-icons/io";

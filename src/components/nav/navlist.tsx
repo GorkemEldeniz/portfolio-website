@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef } from "react";
-import { ModeToggle } from "./mode-toggle";
+import { ModeToggle } from "../mode-toggle";
 
 interface ListPropsType<T> extends ComponentPropsWithoutRef<"div"> {
 	items: readonly T[];

@@ -1,8 +1,8 @@
-import type { ProjectCardProps as ProjectType } from "@components/project-card";
+import type { ProjectCardProps as ProjectType } from "@components/project/card";
 import { FaCss3, FaHtml5, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 
-const myProjects = [
+const projectList = [
 	{
 		image: {
 			src: "../../wordle.png",
@@ -148,4 +148,4 @@ const myProjects = [
 	},
 ] as ProjectType[];
 
-export default myProjects;
+export default projectList;
