@@ -17,8 +17,8 @@ const Hero = () => {
 				On this path, which I started by learning html and css, I am currently
 				working on javascript frameworks (React,Vue). I'm learning css
 				frameworks and technologies such as tailwind, styled-component, scss,
-				module-css. I'm learning ssr frameworks like Next js to become a full
-				stack developer.I work freelance to improve myself.
+				module-css also learning ssr frameworks like Next js to become a full
+				stack developer. Most of the time I do freelance work to improve myself.
 			</p>
 			<div className='flex flex-col items-center gap-6 md:justify-center md:flex-row'>
 				<Button
