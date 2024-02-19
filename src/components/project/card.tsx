@@ -6,6 +6,8 @@ import { Button } from "../ui/button";
 import { FaGithub } from "react-icons/fa";
 import { IoIosLink } from "react-icons/io";
 
+import { motion } from "framer-motion";
+
 type Image = {
 	src: string;
 	alt: string;
@@ -24,19 +26,37 @@ export interface ProjectCardProps {
 	stacks: readonly TechStackType[];
 }
 
+type ProjectCardType = { index: number } & ProjectCardProps;
+
 const ProjectCard = ({
 	image,
 	title,
 	description,
 	link,
 	stacks,
-}: ProjectCardProps) => {
+	index,
+}: ProjectCardType) => {
 	const handleExternalLink = (to: string) => {
 		window.open(to, "_blank");
 	};
 
 	return (
-		<div className='flex flex-col gap-4 text-left'>
+		<motion.div
+			initial={{
+				opacity: 0,
+				y: -100,
+			}}
+			whileInView={{
+				y: 0,
+				opacity: 1,
+			}}
+			viewport={{ once: true }}
+			transition={{
+				delay: 0.1 * index,
+				duration: 1,
+			}}
+			className='flex flex-col gap-4 text-left'
+		>
 			<img
 				className='object-contain aspect-square'
 				src={image.src}
@@ -74,7 +94,7 @@ const ProjectCard = ({
 					</Button>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

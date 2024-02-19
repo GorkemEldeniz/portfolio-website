@@ -46,7 +46,7 @@ const MobileMenu = () => {
 			/>
 			<div
 				className={cn(
-					"absolute -top-[100dvh] left-0 flex w-full h-dvh bg-background transition-all duration-400 ease-in md:hidden",
+					"absolute -top-[100dvh] left-0 flex w-full h-dvh bg-background z-10 transition-all duration-400 ease-in md:hidden",
 					{
 						"top-0": open,
 					}
@@ -65,7 +65,7 @@ const MobileMenu = () => {
 				>
 					<X
 						onClick={() => setOpen(false)}
-						className='absolute top-6 right-6'
+						className='absolute cursor-pointer top-11 right-11'
 						width={30}
 						height={30}
 					/>

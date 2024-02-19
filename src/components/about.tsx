@@ -2,9 +2,26 @@ import type { TechStackType } from "@utils/tech-stacks";
 import techStacks from "@utils/tech-stacks";
 import TechStack from "./tech-stack";
 
+import { motion } from "framer-motion";
+
 const About = () => {
 	return (
-		<>
+		<motion.div
+			className='flex flex-col gap-10 sm:px-[3.75rem] py-[1.5rem] font-light text-center relative'
+			initial={{
+				opacity: 0,
+				x: -100,
+			}}
+			whileInView={{
+				opacity: 1,
+				x: 0,
+			}}
+			viewport={{ once: true }}
+			transition={{
+				delay: 0.9,
+				duration: 1,
+			}}
+		>
 			<h1
 				id='about'
 				className='mt-10 text-3xl tracking-wide md:mt-12 md:text-4xl'
@@ -34,7 +51,7 @@ const About = () => {
 					</div>
 				)}
 			/>
-		</>
+		</motion.div>
 	);
 };
 

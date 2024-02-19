@@ -4,7 +4,7 @@ import socialLinks from "@utils/social-links";
 
 const Foooter = () => {
 	return (
-		<div className='flex justify-center gap-6 mt-10 md:mt-12'>
+		<div className='flex justify-center gap-6 mt-10 md:mt-12 py-[1.5rem]'>
 			{socialLinks.map((link) => (
 				<FooterCard key={link.name} {...link} />
 			))}

@@ -1,3 +1,4 @@
+import cn from "@utils/cn";
 import type { ButtonProps } from "./ui/button";
 import { Button } from "./ui/button";
 
@@ -18,9 +19,16 @@ const LinkButton: React.FC<LinkButtonProps> = ({ to, children, setOpen }) => {
 			asChild
 			variant={to !== "#contact" ? "link" : "default"}
 			size={to === "#contact" ? "lg" : "default"}
-			className='text-xl font-light md:text-2xl'
+			className='relative text-xl font-light md:text-2xl'
 		>
-			<a href={to}>{children}</a>
+			<a
+				className={cn({
+					"link-btn": to !== "#contact",
+				})}
+				href={to}
+			>
+				{children}
+			</a>
 		</Button>
 	);
 };

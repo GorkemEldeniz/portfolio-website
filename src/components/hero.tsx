@@ -1,8 +1,25 @@
 import { Button } from "./ui/button";
 
+import { motion } from "framer-motion";
+
 const Hero = () => {
 	return (
-		<>
+		<motion.div
+			initial={{
+				opacity: 0,
+				x: 100,
+			}}
+			whileInView={{
+				opacity: 1,
+				x: 0,
+			}}
+			viewport={{ once: true }}
+			transition={{
+				delay: 0.9,
+				duration: 1,
+			}}
+			className='flex flex-col gap-10 sm:px-[3.75rem] py-[1.5rem] font-light text-center relative'
+		>
 			<h1
 				id='hero'
 				className='mt-10 text-4xl tracking-wide md:mt-12 md:text-5xl'
@@ -37,7 +54,7 @@ const Hero = () => {
 					<a href='#contact'>Contact</a>
 				</Button>
 			</div>
-		</>
+		</motion.div>
 	);
 };
 
