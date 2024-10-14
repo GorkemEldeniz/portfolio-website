@@ -31,6 +31,7 @@ function Skills() {
 						whileInView={{
 							opacity: 1
 						}}
+						viewport={{ once: true }}
 						key={index}
 						className='transition-all  aspect-video border border-1 rounded-[4px] flex flex-col gap-8 justify-center  py-2 items-center bg-white'
 					>
