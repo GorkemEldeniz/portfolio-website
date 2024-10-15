@@ -70,7 +70,7 @@ function Experience() {
 								alt='Bionluk Logo'
 							/>
 							<h2 className='text-custom-xl lg:text-custom-2xl font-semibold'>
-								Freelance Front end Developer as Bionluk
+								Freelance Front end Developer at Bionluk
 							</h2>
 						</div>
 						<span className='text-zinc-300 block ml-auto mt-7 lg:mt-0 text-custom-base font-semibold'>
