@@ -7,7 +7,7 @@ function Footer() {
 			transition={{ duration: 0.4, delay: 0.2, type: "stiffness", bounce: 0.7 }}
 			initial={{ opacity: 0 }}
 			whileInView={{
-				opacity: 1
+				opacity: 1,
 			}}
 			viewport={{ once: true }}
 			className='bg-black text-white py-5 lg:py-6 flex items-center justify-between px-4 lg:px-8'
@@ -24,10 +24,10 @@ function Footer() {
 			</div>
 			<div className='flex flex-col lg:gap-3 text-right'>
 				<p className='font-semibold text-custom-sm lg:text-custom-base'>
-					@ 2019-2023 Personal
+					&copy; {new Date().getFullYear()} Gorkem Eldeniz.
 				</p>
 				<p className='font-semibold text-custom-sm lg:text-custom-base'>
-					Made In Figma
+					All Rights Reserved.
 				</p>
 			</div>
 		</motion.footer>
