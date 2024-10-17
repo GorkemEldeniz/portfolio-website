@@ -165,15 +165,15 @@ function Projects() {
 						<CarouselItem className='flex items-center justify-center'>
 							<img
 								className='object-cover size-96'
-								src='/advice-generator-1.png'
-								alt='Advice Generator Image'
+								src='/tahminator-1.png'
+								alt='Tahminator Image'
 							/>
 						</CarouselItem>
 						<CarouselItem className='flex items-center justify-center'>
 							<img
 								className='object-cover size-96'
-								src='/advice-generator-2.jpg'
-								alt='Advice Generator Image'
+								src='/tahminator-2.png'
+								alt='Tahminator Image'
 							/>
 						</CarouselItem>
 					</CarouselContent>
@@ -185,19 +185,15 @@ function Projects() {
 						03
 					</h2>
 					<h3 className='text-custom-2xl lg:text-custom-4xl font-bold'>
-						Advice Generator
+						Tahminator
 					</h3>
 					<p className='text-zinc-500 !leading-3 text-custom-base'>
-						The Advice Generator App is a simple web application that generates
-						random pieces of advice for users. It provides inspirational and
-						motivational messages to help users navigate various situations in
-						life.
+						This is a Next.js application designed for predicting soccer match
+						scores. Compete with others, test your knowledge, and win big by
+						making accurate predictions!
 					</p>
 
-					<a
-						href='https://advice-generator-app-main-cyan-beta.vercel.app/'
-						target='_blank'
-					>
+					<a href='https://tahminator.vercel.app/' target='_blank'>
 						<Icon
 							viewBox='0 0 20 20'
 							className='size-5 cursor-pointer'
