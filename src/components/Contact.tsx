@@ -52,7 +52,7 @@ function Contact() {
 					<Link
 						target='_blank'
 						href='mailto:gorkemeldeniz30@gmail.com'
-						className='text-custom-xl lg:text-custom-3xl font-semibold mb-4'
+						className='w-min text-custom-xl lg:text-custom-3xl font-semibold mb-4'
 						text='gorkemeldeniz30@gmail.com'
 					/>
 				</article>
