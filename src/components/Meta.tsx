@@ -1,9 +1,9 @@
-import Helment from "react-helmet";
+import { Helmet } from "react-helmet";
 
 function Meta() {
 	return (
-		<Helment>
-			<meta charSet="UTF-8" />
+		<Helmet>
+			<meta charSet='UTF-8' />
 			<link
 				rel='apple-touch-icon'
 				sizes='180x180'
@@ -54,7 +54,7 @@ function Meta() {
 				content='https://www.gorkemeldeniz.com/site-image.png'
 			/>
 			<meta name='twitter:card' content='summary_large_image' />
-		</Helment>
+		</Helmet>
 	);
 }
 
