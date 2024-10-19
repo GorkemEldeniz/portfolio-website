@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import useIsScrolling from "@/hooks/useIsScrolling";
 import { useScreen } from "@/hooks/useScreen";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { Icon } from "./ui/icon";
 
@@ -46,6 +46,12 @@ function Navbar() {
   const isScrolling = useIsScrolling();
   const isSmallScreen = useScreen(768);
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("overflow-hidden", open);
+
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [open]);
 
   return (
     <motion.nav
