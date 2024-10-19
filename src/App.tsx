@@ -8,16 +8,16 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
 export default function App() {
-	return (
-		<main className='mx-auto w-full relative max-w-screen-2xl space-y-10 md:space-y-14'>
-			<Navbar />
-			<Banner />
-			<Skills />
-			<Experience />
-			<About />
-			<Projects />
-			<Contact />
-			<Footer />
-		</main>
-	);
+  return (
+    <main className="relative w-full mx-auto space-y-10 max-w-screen-2xl md:space-y-14">
+      <Navbar />
+      <Banner />
+      <Skills />
+      <Experience />
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
+    </main>
+  );
 }

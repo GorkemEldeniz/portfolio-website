@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 
 export function useScreen(minWidth: number) {
-	const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
 
-	useEffect(() => {
-		function handleChange() {
-			setIsSmallScreen(window.innerWidth <= minWidth);
-		}
-    
-    handleChange()
+  useEffect(() => {
+    function handleChange() {
+      setIsSmallScreen(window.innerWidth <= minWidth);
+    }
 
-		window.addEventListener("resize", handleChange);
+    handleChange();
 
-		return () => {
-			window.removeEventListener("resize", handleChange);
-		};
-	}, [minWidth]);
+    window.addEventListener("resize", handleChange);
 
-	return isSmallScreen;
+    return () => {
+      window.removeEventListener("resize", handleChange);
+    };
+  }, [minWidth]);
+
+  return isSmallScreen;
 }

@@ -7,12 +7,12 @@ import Meta from "./components/Meta.tsx";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
-	<StrictMode>
-		<>
-			<Analytics />
-			<Meta />
-			<App />
-			<Toaster />
-		</>
-	</StrictMode>
+  <StrictMode>
+    <>
+      <Analytics />
+      <Meta />
+      <App />
+      <Toaster />
+    </>
+  </StrictMode>
 );

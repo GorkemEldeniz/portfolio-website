@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 
 function useIsScrolling() {
-	const [isScrolling, setIsScrolling] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
-	useEffect(() => {
-		function handleScroll() {
-			// Adjust the delay as needed
-			setIsScrolling(window.scrollY > 0);
-		}
+  useEffect(() => {
+    function handleScroll() {
+      // Adjust the delay as needed
+      setIsScrolling(window.scrollY > 0);
+    }
 
-		window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-	return isScrolling;
+  return isScrolling;
 }
 
 export default useIsScrolling;
