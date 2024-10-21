@@ -48,10 +48,10 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    document.body.classList.toggle("overflow-hidden", open);
+    document.body.classList.toggle("overflow-hidden", open && isSmallScreen);
 
     return () => document.body.classList.remove("overflow-hidden");
-  }, [open]);
+  }, [open, isSmallScreen]);
 
   return (
     <motion.nav
