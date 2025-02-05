@@ -8,6 +8,47 @@ import {
 import { motion } from "framer-motion";
 import { Icon } from "./ui/icon";
 
+// Define project type
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  images: string[];
+  link: string;
+  github: string;
+}
+
+// Projects data
+const projects: Project[] = [
+  {
+    id: 1,
+    title: "Kelime Oyunu",
+    description:
+      'The app, "Kelime Oyunu," is a web-based game designed to enhance users\' Turkish vocabulary through an engaging and interactive learning experience. It features various gameplay mechanics',
+    images: ["/kelimeoyunu-1.png", "/kelimeoyunu-2.png", "/kelimeoyunu-3.png"], // Update with your actual image paths
+    link: "https://kelimeoyunu.net.tr/", // Update with actual link
+    github: "https://github.com/yourusername/kelime-oyunu",
+  },
+  {
+    id: 2,
+    title: "Wordle Clone",
+    description:
+      "This is a clone of the popular game Wordle implemented in JavaScript, HTML, and CSS.",
+    images: ["/wordle-1.png", "/wordle-2.png", "/wordle-3.png"],
+    link: "https://wordle-clone-2-hazel.vercel.app/",
+    github: "https://github.com/yourusername/wordle-clone",
+  },
+  {
+    id: 3,
+    title: "iWeather",
+    description:
+      "It is an application that visualizes weather data using openweather api according to user inputs",
+    images: ["/iweather-1.jpeg", "/iweather-2.jpeg", "/iweather-3.jpeg"],
+    link: "https://react-staj.vercel.app/",
+    github: "https://github.com/yourusername/iweather",
+  },
+];
+
 function Projects() {
   return (
     <section
@@ -18,191 +59,119 @@ function Projects() {
         My <span className="font-extrabold">Projects</span>
       </h1>
 
-      <motion.div
-        initial={{
-          opacity: 0,
-          x: 50,
-        }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            duration: 1,
-          },
-        }}
-        viewport={{ once: true }}
-        className="py-5 flex flex-col lg:flex-row items-center gap-7 lg:gap-10"
-      >
-        <Carousel className="w-full">
-          <CarouselContent>
-            <CarouselItem className="flex items-center justify-center">
-              <img
-                className="object-cover size-96"
-                src="/wordle-1.png"
-                alt="Wordle Clone Image"
-              />
-            </CarouselItem>
-            <CarouselItem className="flex items-center justify-center">
-              <img
-                className="object-cover size-96"
-                src="/wordle-2.png"
-                alt="Wordle Clone Image"
-              />
-            </CarouselItem>
-            <CarouselItem className="flex items-center justify-center">
-              <img
-                className="object-cover size-96"
-                src="/wordle-3.png"
-                alt="Wordle Clone Image"
-              />
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-        <article className="w-full flex flex-col gap-7">
-          <h2 className="font-extrabold text-custom-5xl lg:text-custom-7xl">
-            01
-          </h2>
-          <h3 className="text-custom-2xl lg:text-custom-4xl font-bold">
-            Wordle Clone
-          </h3>
-          <p className="text-zinc-500 !leading-3 text-custom-base">
-            This is a clone of the popular game Wordle implemented in
-            JavaScript, HTML, and CSS.
-          </p>
-          <a href="https://wordle-clone-2-hazel.vercel.app/" target="_blank">
-            <Icon
-              viewBox="0 0 20 20"
-              className="size-5 cursor-pointer"
-              icon="read-more"
-            />
-          </a>
-        </article>
-      </motion.div>
+      {projects.map((project, index) => {
+        const isEven = index % 2 === 0;
 
-      <motion.div
-        initial={{
-          opacity: 0,
-          x: -50,
-        }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            duration: 1,
-          },
-        }}
-        viewport={{ once: true }}
-        className="py-5 flex flex-col-reverse lg:flex-row items-center gap-7 lg:gap-10"
-      >
-        <article className="w-full flex flex-col gap-7">
-          <h2 className="font-extrabold text-custom-5xl lg:text-custom-7xl">
-            02
-          </h2>
-          <h3 className="text-custom-2xl lg:text-custom-4xl font-bold">
-            iWeather
-          </h3>
-          <p className="text-zinc-500 !leading-3 text-custom-base line-clamp-2">
-            It is an application that visualizes weather data using openweather
-            api according to user inputs
-          </p>
-          <a href="https://react-staj.vercel.app/" target="_blank">
-            <Icon
-              viewBox="0 0 20 20"
-              className="size-5 cursor-pointer"
-              icon="read-more"
-            />
-          </a>
-        </article>
-
-        <Carousel className="w-full">
-          <CarouselContent>
-            <CarouselItem className="flex items-center justify-center">
-              <img
-                className="object-contain size-96"
-                src="/iweather-1.jpeg"
-                alt="Iweather Image"
-              />
-            </CarouselItem>
-            <CarouselItem className="flex items-center justify-center">
-              <img
-                className="object-contain size-96"
-                src="/iweather-2.jpeg"
-                alt="Iweather Image"
-              />
-            </CarouselItem>
-            <CarouselItem className="flex items-center justify-center">
-              <img
-                className="object-contain size-96"
-                src="/iweather-3.jpeg"
-                alt="Iweather Image"
-              />
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </motion.div>
-
-      <motion.div
-        initial={{
-          opacity: 0,
-          x: 50,
-        }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            duration: 1,
-          },
-        }}
-        viewport={{ once: true }}
-        className="py-5 flex flex-col lg:flex-row items-center gap-7 lg:gap-10"
-      >
-        <Carousel className="w-full">
-          <CarouselContent>
-            <CarouselItem className="flex items-center justify-center">
-              <img
-                className="object-cover size-96"
-                src="/tahminator-1.png"
-                alt="Tahminator Image"
-              />
-            </CarouselItem>
-            <CarouselItem className="flex items-center justify-center">
-              <img
-                className="object-cover size-96"
-                src="/tahminator-2.png"
-                alt="Tahminator Image"
-              />
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-        <article className="w-full flex flex-col gap-7">
-          <h2 className="font-extrabold text-custom-5xl lg:text-custom-7xl">
-            03
-          </h2>
-          <h3 className="text-custom-2xl lg:text-custom-4xl font-bold">
-            Tahminator
-          </h3>
-          <p className="text-zinc-500 !leading-3 text-custom-base">
-            This is a Next.js application designed for predicting soccer match
-            scores. Compete with others, test your knowledge, and win big by
-            making accurate predictions!
-          </p>
-
-          <a href="https://tahminator.vercel.app/" target="_blank">
-            <Icon
-              viewBox="0 0 20 20"
-              className="size-5 cursor-pointer"
-              icon="read-more"
-            />
-          </a>
-        </article>
-      </motion.div>
+        return (
+          <motion.div
+            key={project.id}
+            initial={{
+              opacity: 0,
+              x: isEven ? 50 : -50,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                duration: 1,
+              },
+            }}
+            viewport={{ once: true }}
+            className={`py-5 flex flex-col lg:flex-row items-center gap-7 lg:gap-10`}
+          >
+            {isEven ? (
+              // Even numbered projects (0, 2, 4...) - Carousel on left, Details on right
+              <>
+                <ProjectCarousel images={project.images} />
+                <ProjectDetails
+                  number={String(project.id).padStart(2, "0")}
+                  title={project.title}
+                  description={project.description}
+                  link={project.link}
+                  github={project.github}
+                />
+              </>
+            ) : (
+              // Odd numbered projects (1, 3, 5...) - Details on left, Carousel on right
+              <>
+                <ProjectDetails
+                  number={String(project.id).padStart(2, "0")}
+                  title={project.title}
+                  description={project.description}
+                  link={project.link}
+                  github={project.github}
+                />
+                <ProjectCarousel images={project.images} />
+              </>
+            )}
+          </motion.div>
+        );
+      })}
     </section>
+  );
+}
+
+// Separate components for better organization
+function ProjectCarousel({ images }: { images: string[] }) {
+  return (
+    <Carousel className="w-full">
+      <CarouselContent>
+        {images.map((image, index) => (
+          <CarouselItem
+            key={index}
+            className="flex items-center justify-center"
+          >
+            <img
+              className="object-contain size-96"
+              src={image}
+              alt={`Project Image ${index + 1}`}
+            />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  );
+}
+
+function ProjectDetails({
+  number,
+  title,
+  description,
+  link,
+  github,
+}: {
+  number: string;
+  title: string;
+  description: string;
+  link: string;
+  github: string;
+}) {
+  return (
+    <article className="w-full flex flex-col gap-7">
+      <h2 className="font-extrabold text-custom-5xl lg:text-custom-7xl">
+        {number}
+      </h2>
+      <h3 className="text-custom-2xl lg:text-custom-4xl font-bold">{title}</h3>
+      <p className="text-zinc-500 !leading-3 text-custom-base">{description}</p>
+      <div className="flex gap-4">
+        <a href={link} target="_blank" title="Live Demo">
+          <Icon
+            viewBox="0 0 20 20"
+            className="size-5 cursor-pointer"
+            icon="read-more"
+          />
+        </a>
+        <a href={github} target="_blank" title="View Code">
+          <Icon
+            viewBox="0 0 24 24"
+            className="size-5 cursor-pointer fill-white"
+            icon="github"
+          />
+        </a>
+      </div>
+    </article>
   );
 }
 
