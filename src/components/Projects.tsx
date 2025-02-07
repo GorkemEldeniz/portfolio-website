@@ -27,7 +27,7 @@ const projects: Project[] = [
       'The app, "Kelime Oyunu," is a web-based game designed to enhance users\' Turkish vocabulary through an engaging and interactive learning experience. It features various gameplay mechanics',
     images: ["/kelimeoyunu-1.png", "/kelimeoyunu-2.png", "/kelimeoyunu-3.png"], // Update with your actual image paths
     link: "https://kelimeoyunu.net.tr/", // Update with actual link
-    github: "https://github.com/yourusername/kelime-oyunu",
+    github: "https://github.com/GorkemEldeniz/Kelime-Oyunu",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const projects: Project[] = [
       "This is a clone of the popular game Wordle implemented in JavaScript, HTML, and CSS.",
     images: ["/wordle-1.png", "/wordle-2.png", "/wordle-3.png"],
     link: "https://wordle-clone-2-hazel.vercel.app/",
-    github: "https://github.com/yourusername/wordle-clone",
+    github: "https://github.com/GorkemEldeniz/wordle-clone-2",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const projects: Project[] = [
       "It is an application that visualizes weather data using openweather api according to user inputs",
     images: ["/iweather-1.jpeg", "/iweather-2.jpeg", "/iweather-3.jpeg"],
     link: "https://react-staj.vercel.app/",
-    github: "https://github.com/yourusername/iweather",
+    github: "https://github.com/GorkemEldeniz/React-Staj",
   },
 ];
 
