@@ -31,21 +31,25 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Wordle Clone",
+    title: "Admin Dashboard for Music Campaign Management System",
     description:
-      "This is a clone of the popular game Wordle implemented in JavaScript, HTML, and CSS.",
-    images: ["/wordle-1.png", "/wordle-2.png", "/wordle-3.png"],
-    link: "https://wordle-clone-2-hazel.vercel.app/",
-    github: "https://github.com/GorkemEldeniz/wordle-clone-2",
+      "A powerful admin dashboard for managing music campaigns, built with modern web technologies. It includes features for campaign creation, management, and analytics.",
+    images: [
+      "/music-campaign-dashboard-1.png",
+      "/music-campaign-dashboard-2.png",
+      "/music-campaign-dashboard-3.png",
+    ],
+    link: "https://music-campaign-admin-dashboard.vercel.app",
+    github: "https://github.com/GorkemEldeniz/Music-Campaign-Admin-Dashboard",
   },
   {
     id: 3,
-    title: "iWeather",
+    title: "Hypershop e-commerce web site",
     description:
-      "It is an application that visualizes weather data using openweather api according to user inputs",
-    images: ["/iweather-1.jpeg", "/iweather-2.jpeg", "/iweather-3.jpeg"],
-    link: "https://react-staj.vercel.app/",
-    github: "https://github.com/GorkemEldeniz/React-Staj",
+      "E-commerce interface developed using modern web technologies. It features a responsive design, product listings, and a shopping cart system.",
+    images: ["/hypershop-1.png", "/hypershop-2.png", "/hypershop-3.png"],
+    link: "https://hyper-teknoloji-sandy.vercel.app/",
+    github: "https://github.com/GorkemEldeniz/Hyper-Teknoloji",
   },
 ];
 
@@ -121,11 +125,14 @@ function ProjectCarousel({ images }: { images: string[] }) {
             key={index}
             className="flex items-center justify-center"
           >
-            <img
-              className="object-contain size-96"
-              src={image}
-              alt={`Project Image ${index + 1}`}
-            />
+            <div className="flex items-center justify-center w-full h-72 md:h-96 max-w-full">
+              <img
+                className="object-contain max-h-72 md:max-h-96 w-auto h-auto max-w-full rounded-lg shadow-lg bg-zinc-900"
+                src={image}
+                alt={`Project Image ${index + 1}`}
+                loading="lazy"
+              />
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
