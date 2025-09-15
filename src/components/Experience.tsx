@@ -10,6 +10,44 @@ function Experience() {
         <motion.li
           initial={{
             opacity: 0,
+            x: -50,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{ once: true }}
+          className="px-6 py-7 space-y-7 text-white border border-zinc-500 rounded-lg"
+        >
+          <header className="block md:flex items-center">
+            <div className="flex items-center gap-7">
+              <img
+                className="size-8 object-cover"
+                src="/copetract-ogo.webp"
+                alt="Copetract Logo"
+              />
+              <h2 className="text-custom-xl lg:text-custom-2xl font-semibold">
+                Full Stack Developer at Copetract
+              </h2>
+            </div>
+            <span className="text-zinc-300 block ml-auto mt-7 lg:mt-0 text-custom-base font-semibold">
+              June 2025 - September 2025
+            </span>
+          </header>
+          <p className="text-custom-base text-zinc-300 !tracking-wider">
+            Built a modern, responsive contract tracking and management
+            application with Next.js, leading frontend architecture and user
+            experience through reusable components and clear flows. Collaborated
+            on Laravel + MySQL APIs and contributed across the stack, while
+            primarily specializing in frontend implementation.
+          </p>
+        </motion.li>
+        <motion.li
+          initial={{
+            opacity: 0,
             x: 50,
           }}
           whileInView={{

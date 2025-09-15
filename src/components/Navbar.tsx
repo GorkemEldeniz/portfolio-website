@@ -100,7 +100,7 @@ function Navbar() {
       </ol>
 
       <Button asChild className="group hidden md:inline-flex">
-        <a href="/gorkemeldeniz-en.pdf" download>
+        <a href="/Gorkem_Eldeniz_Full_Stack_Web_Developer_CV.pdf" download>
           Resume{" "}
           <Icon
             viewBox="0 0 20 20"
